@@ -18,8 +18,9 @@ fastify.register(tripRoutes, { prefix: '/api/trips' });
 const start = async () => {
   try {
     await connectToDatabase();
-    await fastify.listen({ port: 3001, host: '0.0.0.0' });
-    console.log('Server listening on port 3001');
+    const port = Number(process.env.PORT) || 3001;
+    await fastify.listen({ port, host: '0.0.0.0' });
+    console.log(`Server listening on port ${port}`);
   } catch (err) {
     console.error(err);
     process.exit(1);

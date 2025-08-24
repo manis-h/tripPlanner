@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.0.0",
+    "fastify": "^4.0.0",
+    "mongoose": "^8.18.0",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.4",
+    "typescript": "^5.0.0"
+  }
+}
